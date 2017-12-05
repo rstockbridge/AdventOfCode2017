@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 final class Main {
 
     public static void main(String[] args) {
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/rebecca/Desktop/Dropbox/documents/coding/AdventOfCode2017/day04/src/main/java/input.txt"))) {
+        try (final BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/rebecca/Desktop/Dropbox/documents/coding/AdventOfCode2017/day04/src/main/java/input.txt"))) {
             final List<List<String>> storedInputFile = new ArrayList<>();
 
             for (String line; (line = bufferedReader.readLine()) != null; ) {
