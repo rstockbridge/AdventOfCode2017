@@ -3,8 +3,8 @@ import java.util.*;
 final class Main {
 
     public static void main(String[] args) {
-        int finalSquareIndex = 325489;
-        Spiral spiral = new Spiral(finalSquareIndex);
+        final int finalSquareIndex = 325489;
+        final Spiral spiral = new Spiral(finalSquareIndex);
         System.out.format("Part I: The Manhattan distance from square %d to square 1 is %d.\n", finalSquareIndex, spiral.getFinalSquareDistance());
         System.out.format("Part II: The first spiral value larger than %d is %d.\n", finalSquareIndex, calculatePartIIFinalValue(spiral.getLocations(), finalSquareIndex));
     }
@@ -22,7 +22,7 @@ final class Main {
 
         private List<Coordinate> locations;
 
-        Spiral(int inputFinalSquare) {
+        Spiral(final int inputFinalSquare) {
             finalSquareIndex = inputFinalSquare;
             finalBoxIndex = calculateBox(finalSquareIndex);
 
@@ -38,11 +38,11 @@ final class Main {
             populateSpiral();
         }
 
-        private static int calculateBox(int square) {
+        private static int calculateBox(final int square) {
             return (int) Math.ceil(Math.sqrt(square));
         }
 
-        private static int calculateHalfBox(int box) {
+        private static int calculateHalfBox(final int box) {
             return box / 2 + 1;
         }
 
@@ -110,7 +110,7 @@ final class Main {
     }
 
     private static int calculatePartIIFinalValue(final List<Coordinate> locations, final int finalSquareIndex) {
-        Map<Coordinate, Integer> values = new HashMap<>();
+        final Map<Coordinate, Integer> values = new HashMap<>();
 
         int squareIndex = 0;
         values.put(locations.get(squareIndex), 1);
@@ -119,7 +119,7 @@ final class Main {
         do {
             int sum = 0;
 
-            for (Coordinate neighborLocation : locations.get(squareIndex).get8Neighbors()) {
+            for (final Coordinate neighborLocation : locations.get(squareIndex).get8Neighbors()) {
                 if (values.containsKey(neighborLocation)) {
                     sum += values.get(neighborLocation);
                 }
@@ -138,7 +138,7 @@ final class Main {
         int y;
         int manhattanDistance;
 
-        Coordinate(int inputX, int inputY) {
+        Coordinate(final int inputX, final int inputY) {
             x = inputX;
             y = inputY;
 
@@ -161,7 +161,7 @@ final class Main {
             int x = getX();
             int y = getY();
 
-            Set<Coordinate> result = new HashSet<>();
+            final Set<Coordinate> result = new HashSet<>();
             result.add(new Coordinate(x - 1, y - 1));
             result.add(new Coordinate(x - 1, y));
             result.add(new Coordinate(x - 1, y + 1));
@@ -180,8 +180,16 @@ final class Main {
         }
 
         @Override
-        public boolean equals(Object o) {
-            Coordinate other = (Coordinate) o;
+        public boolean equals(final Object o) {
+            if (o == this) {
+                return true;
+            }
+
+            if (!(o instanceof Coordinate)) {
+                return false;
+            }
+
+            final Coordinate other = (Coordinate) o;
             return (x == other.x && y == other.y);
         }
     }
