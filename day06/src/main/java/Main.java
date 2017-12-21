@@ -15,9 +15,10 @@ final class Main {
                 .collect(Collectors.toList());
 
         Output output = solvePuzzle(parsedInput);
-        System.out.println(output.getNumberOfRedistributionCycles());
-        System.out.println(output.getNumberOfCycles());
 
+        System.out.format("Part I: The number of redistribution cycles is %d.\n", output.getNumberOfRedistributionCycles
+                ());
+        System.out.format("Part II: The number of cycles is %d.\n", output.getNumberOfCycles());
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {

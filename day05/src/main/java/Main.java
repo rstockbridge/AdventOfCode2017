@@ -15,7 +15,7 @@ final class Main {
         }
 
         System.out.format("Part I: The number of steps taken is %d.\n", calculateNumberOfStepsPartI(parsedInput));
-        System.out.format("Part I: The number of steps taken is %d.\n", calculateNumberOfStepsPartII(parsedInput));
+        System.out.format("Part II: The number of steps taken is %d.\n", calculateNumberOfStepsPartII(parsedInput));
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {

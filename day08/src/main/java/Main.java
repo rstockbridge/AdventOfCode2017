@@ -14,8 +14,9 @@ final class Main {
         List<Instruction> instructions = parseInstructions(storedInput);
 
         Output output = solvePuzzle(registers, instructions);
-        System.out.println(output.getHighestValueAtCompletion());
-        System.out.println(output.getHighestValueEver());
+
+        System.out.format("Part I: The largest value is %d.\n", output.getHighestValueAtCompletion());
+        System.out.format("Part II: The highest value ever is is %d.\n", output.getHighestValueEver());
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {
