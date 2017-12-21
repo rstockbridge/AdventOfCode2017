@@ -7,7 +7,8 @@ final class Main {
 
     public static void main(String[] args) throws IOException {
         final List<String> storedInput = readInputFile
-                ("/Users/rebecca/Desktop/Dropbox/documents/coding/AdventOfCode2017/day08/src/main/java/input.txt");
+                ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day08/src/main/java/input" +
+                        ".txt");
 
         Map<String, Integer> registers = populateRegisters(storedInput);
         List<Instruction> instructions = parseInstructions(storedInput);

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 final class Main {
 
     public static void main(String[] args) throws IOException {
-        final List<String> storedInput = readInputFile("/Users/rebecca/Desktop/Dropbox/documents/coding/AdventOfCode2017/day02/src/main/java/input.txt");
+        final List<String> storedInput = readInputFile("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day02/src/main/java/input.txt");
 
         final List<List<Integer>> parsedInput = new ArrayList<>();
         for (String line : storedInput) {
