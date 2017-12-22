@@ -33,24 +33,6 @@ final class Main {
         return result;
     }
 
-    final static class Output {
-        private int numberOfRedistributionCycles;
-        private int numberOfCycles;
-
-        Output(final int inputNumberOfRedistributionCycles, final int inputNumberOfCycles) {
-            numberOfRedistributionCycles = inputNumberOfRedistributionCycles;
-            numberOfCycles = inputNumberOfCycles;
-        }
-
-        int getNumberOfRedistributionCycles() {
-            return numberOfRedistributionCycles;
-        }
-
-        int getNumberOfCycles() {
-            return numberOfCycles;
-        }
-    }
-
     private static Output solvePuzzle(List<Integer> data) {
         final List<String> statesObserved = new ArrayList<>();
         int numberOfRedistributionCycles = 0;
