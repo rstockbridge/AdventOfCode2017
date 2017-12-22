@@ -51,50 +51,6 @@ final class Main {
         return result;
     }
 
-    final static class Instruction {
-        String registerToModify;
-        String directionToModify;
-        int amountToModify;
-        String registerInCondition;
-        String requirementInCondition;
-        int amountInCondition;
-
-        Instruction(final String inputString) {
-            final String[] parsedInstruction = inputString.split(" ");
-
-            registerToModify = parsedInstruction[0];
-            directionToModify = parsedInstruction[1];
-            amountToModify = Integer.parseInt(parsedInstruction[2]);
-            registerInCondition = parsedInstruction[4];
-            requirementInCondition = parsedInstruction[5];
-            amountInCondition = Integer.parseInt(parsedInstruction[6]);
-        }
-
-        String getRegisterToModify() {
-            return registerToModify;
-        }
-
-        String getDirectionToModify() {
-            return directionToModify;
-        }
-
-        int getAmountToModify() {
-            return amountToModify;
-        }
-
-        String getRegisterInCondition() {
-            return registerInCondition;
-        }
-
-        String getRequirementInCondition() {
-            return requirementInCondition;
-        }
-
-        int getAmountInCondition() {
-            return amountInCondition;
-        }
-    }
-
     private static boolean conditionIsTrue(final Instruction instruction, final int amount) {
         final int amountInCondition = instruction.getAmountInCondition();
 
@@ -114,24 +70,6 @@ final class Main {
         }
 
         throw new IllegalStateException("This line should not be reached.");
-    }
-
-    final static class Output {
-        private int highestValueAtCompletion;
-        private int highestValueEver;
-
-        Output(final int inputHighestValueAtCompletion, final int inputHighestValueEver) {
-            highestValueAtCompletion = inputHighestValueAtCompletion;
-            highestValueEver = inputHighestValueEver;
-        }
-
-        int getHighestValueAtCompletion() {
-            return highestValueAtCompletion;
-        }
-
-        int getHighestValueEver() {
-            return highestValueEver;
-        }
     }
 
     private static Output solvePuzzle(final Map<String, Integer> registers, List<Instruction> instructions) {
