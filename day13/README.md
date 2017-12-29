@@ -163,7 +163,7 @@ The severity of getting caught on a layer is equal to its depth multiplied by it
 
 Given the details of the firewall you've recorded, if you leave immediately, what is the severity of your whole trip?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `1704`.
 
 ## Part Two
 
@@ -281,4 +281,4 @@ Because all smaller delays would get you caught, the fewest number of picosecond
 
 What is the fewest number of picoseconds that you need to delay the packet to pass through the firewall without being caught?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `3970918`.

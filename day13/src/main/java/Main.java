@@ -10,8 +10,10 @@ final class Main {
                 ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day13/src/main/java/input" +
                         ".txt");
 
-        System.out.format("Part I: %d.\n", 0);
-        System.out.format("Part II: %d.\n", 0);
+        final Map<Integer, Integer> parsedInput = parseInput(storedInput);
+
+        System.out.format("Part I: %s.\n", runFirewall(parsedInput, 0).getSeverity());
+        System.out.format("Part II: %d.\n", calculateMinDelay(parsedInput));
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {
@@ -22,6 +24,44 @@ final class Main {
                 result.add(line);
             }
         }
+
+        return result;
+    }
+
+    private static Map<Integer, Integer> parseInput(final List<String> storedInput) {
+        final Map<Integer, Integer> result = new HashMap<>();
+        for (final String line : storedInput) {
+            final String[] splitLine = line.split(": ");
+            result.put(Integer.valueOf(splitLine[0]), Integer.valueOf(splitLine[1]));
+        }
+
+        return result;
+    }
+
+    private static Output runFirewall(final Map<Integer, Integer> parsedInput, final int delay) {
+        int severity = 0;
+        boolean wasCaught = false;
+
+        for (final Integer depth : parsedInput.keySet()) {
+            final int range = parsedInput.get(depth);
+
+            if ((depth + delay) % (2 * (range - 1)) == 0) {
+                wasCaught = true;
+                severity += depth * range;
+            }
+        }
+
+        return new Output(severity, wasCaught);
+    }
+
+    private static int calculateMinDelay(final Map<Integer, Integer> parsedInput) {
+        int result = 0;
+        boolean wasCaught;
+
+        do {
+            result++;
+            wasCaught = runFirewall(parsedInput, result).getWasCaught();
+        } while (wasCaught);
 
         return result;
     }
