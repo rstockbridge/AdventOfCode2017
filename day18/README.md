@@ -42,7 +42,7 @@ At the time the recover operation is executed, the frequency of the last sound p
 
 What is the value of the recovered frequency (the value of the most recently played sound) the first time a `rcv` instruction is executed with a non-zero value?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `3188`.
 
 ## Part Two
 
@@ -73,4 +73,4 @@ It should be noted that it would be equally valid for the programs to run at dif
 
 Once both of your programs have terminated (regardless of what caused them to do so), how many times did program `1` send a value?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `7112`.
