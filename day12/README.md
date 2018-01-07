@@ -35,7 +35,7 @@ Therefore, a total of `6` programs are in this group; all but program `1`, which
 
 How many programs are in the group that contains program ID `0`?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `134`.
 
 ## Part Two
 
@@ -47,4 +47,4 @@ In the example above, there were `2` groups: one consisting of programs `0,2,3,4
 
 How many groups are there in total?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `193`.
