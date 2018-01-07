@@ -96,7 +96,7 @@ After a total of `10000` bursts of activity, `5587` bursts will have caused an i
 
 Given your actual map, after `10000` bursts of activity, how many bursts cause a node to become infected? (Do not count nodes that begin infected.)
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `5280`.
 
 ## Part Two
 
@@ -193,4 +193,4 @@ Of the first `100` bursts, `26` will result in infection. Unfortunately, another
 
 Given your actual map, after `10000000` bursts of activity, how many bursts cause a node to become infected? (Do not count nodes that begin infected.)
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `2512261`.

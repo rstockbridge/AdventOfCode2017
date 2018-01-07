@@ -10,8 +10,12 @@ final class Main {
                 ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day22/src/main/java/input" +
                         ".txt");
 
-        System.out.format("Part I: %d.\n", 0);
-        System.out.format("Part II: %d.\n", 0);
+        VirusCarrier carrierI = new VirusCarrierPartI(storedInput);
+        VirusCarrier carrierII = new VirusCarrierPartII(storedInput);
+
+        System.out.format("Part I: The number of bursts causing infections is %d.\n", solvePuzzle(carrierI, 10000));
+        System.out.format("Part II: The number of bursts causing infections is %d.\n", solvePuzzle(carrierII,
+                10000000));
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {
@@ -24,5 +28,13 @@ final class Main {
         }
 
         return result;
+    }
+
+    private static int solvePuzzle(final VirusCarrier carrier, final int numberOfBursts) {
+        for(int i = 0; i < numberOfBursts; i++) {
+            carrier.runBurst();
+        }
+
+        return carrier.getNumberOfBurstsCausingInfection();
     }
 }

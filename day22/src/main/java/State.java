@@ -1,0 +1,3 @@
+enum State {
+    CLEAN, WEAKENED, INFECTED, FLAGGED
+}
