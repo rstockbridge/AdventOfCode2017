@@ -1,25 +1,35 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.*;
-
 final class Main {
 
-    public static void main(String[] args) throws IOException {
-        final List<String> storedInput = readInputFile
-                ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day15/src/main/java/input" +
-                        ".txt");
+    public static void main(String[] args) {
+        final Generator A = new Generator(883, 16807, 4);
+        final Generator B = new Generator(879, 48271, 8);
 
-        System.out.format("Part I: %d.\n", 0);
-        System.out.format("Part II: %d.\n", 0);
+        System.out.format("Part II: %d.\n", calculatePartICount(A, B, 40000000));
+
+        A.reset();
+        B.reset();
+
+        System.out.format("Part II: %d.\n", calculatePartIICount(A, B, 5000000));
     }
 
-    private static List<String> readInputFile(final String inputFilePath) throws IOException {
-        final List<String> result = new ArrayList<>();
+    private static int calculatePartICount(final Generator A, final Generator B, final int numberOfPairs) {
+        int result = 0;
 
-        try (final BufferedReader bufferedReader = new BufferedReader(new FileReader(inputFilePath))) {
-            for (String line; (line = bufferedReader.readLine()) != null; ) {
-                result.add(line);
+        for (int i = 0; i < numberOfPairs; i++) {
+            if (A.nextValuePartI().equals(B.nextValuePartI())) {
+                result++;
+            }
+        }
+
+        return result;
+    }
+
+    private static int calculatePartIICount(final Generator A, final Generator B, final int numberOfPairs) {
+        int result = 0;
+
+        for (int i = 0; i < numberOfPairs; i++) {
+            if (A.nextValuePartII().equals(B.nextValuePartII())) {
+                result++;
             }
         }
 

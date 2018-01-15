@@ -42,7 +42,7 @@ To get a significant sample, the judge would like to consider 40 million pairs. 
 
 After 40 million pairs, what is the judge's final count?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `609`.
 
 ## Part Two
 
@@ -95,4 +95,4 @@ This change makes the generators much slower, and the judge is getting impatient
 
 After 5 million pairs, but using this new generator logic, what is the judge's final count?
 
-> Your puzzle answer was ``.
+> Your puzzle answer was `253`.
