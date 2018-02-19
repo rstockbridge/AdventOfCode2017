@@ -12,7 +12,7 @@ final class Main {
 
         final ParsingOutput output = new ParsingOutput(storedInput.get(0));
 
-        System.out.format("Part I: The total score is %d.\n", calculateScore(output.getStream()));
+        System.out.format("Part I: The total score is %d.\n", calculateScore(output.getParsedStream()));
         System.out.format("Part II: The number of non-canceled characters within the garbage is %d.\n", output.getNumberOfNonCanceledCharacters());
     }
 

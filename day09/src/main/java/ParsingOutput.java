@@ -1,14 +1,14 @@
 final class ParsingOutput {
 
-    private String stream;
+    private String parsedStream;
     private int numberOfNonCanceledCharacters;
 
-    ParsingOutput(final String stream) {
-        parse(stream);
+    ParsingOutput(final String inputStream) {
+        parse(inputStream);
     }
 
-    String getStream() {
-        return stream;
+    String getParsedStream() {
+        return parsedStream;
     }
 
     int getNumberOfNonCanceledCharacters() {
@@ -23,7 +23,7 @@ final class ParsingOutput {
 
         // need to calculate numberOfNonCanceledCharacters before removing '<', '>', and ','
         final String streamNoInnerGarbage = removeInnerGarbage(streamNoCanceledCharacters);
-        stream = removeFinalCharacters(streamNoInnerGarbage);
+        parsedStream = removeFinalCharacters(streamNoInnerGarbage);
         numberOfNonCanceledCharacters = numberOfCharactersBeforeDeletion - numberOfExclamationPoints - streamNoInnerGarbage.length();
     }
 
