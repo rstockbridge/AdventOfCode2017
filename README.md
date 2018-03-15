@@ -5,9 +5,13 @@ Java solutions for the [2017 puzzles](http://adventofcode.com/2017).
 
 # Running Solutions
 
-To run a specific day, e.g., day 0:
+To run a specific day, e.g., day 01:
 
-    ./gradlew day01:run
+* From this directory using gradle: `./gradlew day01:run`
+
+* From `day01/src/main/java`:
+	1. Compile using `javac *.java`
+	2. Run using `java Main`
 
 # License
 
