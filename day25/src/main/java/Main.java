@@ -6,9 +6,7 @@ import java.util.*;
 final class Main {
 
     public static void main(String[] args) throws IOException {
-        final List<String> storedInput = readInputFile
-                ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day25/src/main/java/input" +
-                        ".txt");
+        final List<String> storedInput = readInputFile("src/main/java/input.txt");
 
         String[] splitLine0 = parseLine(storedInput.get(0));
         String[] splitLine1 = parseLine(storedInput.get(1));

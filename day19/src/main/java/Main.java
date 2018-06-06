@@ -7,9 +7,7 @@ import java.util.List;
 final class Main {
 
     public static void main(String[] args) throws IOException {
-        final List<String> storedInput = readInputFile
-                ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day19/src/main/java/input" +
-                        ".txt");
+        final List<String> storedInput = readInputFile("src/main/java/input.txt");
 
         final Grid grid = new Grid(storedInput);
         final Packet packet = new Packet(new Coordinate(grid.getInitialX(), grid.getLength() - 1), Orientation.SOUTH);

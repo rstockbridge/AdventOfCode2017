@@ -6,9 +6,7 @@ import java.util.*;
 final class Main {
 
     public static void main(String[] args) throws IOException {
-        final List<String> storedInput = readInputFile
-                ("/Users/rebecca/Desktop/Dropbox/documents/work/coding/AdventOfCode2017/day24/src/main/java/input" +
-                        ".txt");
+        final List<String> storedInput = readInputFile("src/main/java/input.txt");
 
         final List<Component> components = parseInput(storedInput);
         List<Bridge> validBridges = findValidBridges(0, components);
