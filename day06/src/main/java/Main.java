@@ -14,8 +14,7 @@ final class Main {
 
         Output output = solvePuzzle(parsedInput);
 
-        System.out.format("Part I: The number of redistribution cycles is %d.\n", output.getNumberOfRedistributionCycles
-                ());
+        System.out.format("Part I: The number of redistribution cycles is %d.\n", output.getNumberOfRedistributionCycles());
         System.out.format("Part II: The number of cycles is %d.\n", output.getNumberOfCycles());
     }
 

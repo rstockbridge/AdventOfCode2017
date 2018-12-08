@@ -12,8 +12,7 @@ final class Main {
         VirusCarrier carrierII = new VirusCarrierPartII(storedInput);
 
         System.out.format("Part I: The number of bursts causing infections is %d.\n", solvePuzzle(carrierI, 10000));
-        System.out.format("Part II: The number of bursts causing infections is %d.\n", solvePuzzle(carrierII,
-                10000000));
+        System.out.format("Part II: The number of bursts causing infections is %d.\n", solvePuzzle(carrierII, 10000000));
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {

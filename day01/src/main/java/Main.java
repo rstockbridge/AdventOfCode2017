@@ -12,7 +12,7 @@ final class Main {
         final String parsedInput = storedInput.get(0);
 
         System.out.format("Part I: the solution is %d.\n", solveCaptcha(parsedInput, 1));
-        System.out.format("Part II: the solution to is %d.\n", solveCaptcha(parsedInput, parsedInput.length() / 2));
+        System.out.format("Part II: the solution is %d.\n", solveCaptcha(parsedInput, parsedInput.length() / 2));
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {

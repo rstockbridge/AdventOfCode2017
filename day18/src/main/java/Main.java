@@ -8,10 +8,8 @@ final class Main {
     public static void main(String[] args) throws IOException {
         final List<String> storedInput = readInputFile("src/main/java/input.txt");
 
-        System.out.format("Part I: The value of the recovered frequency is %d.\n", new ProgramPartI(storedInput)
-                .solvePartI());
-        System.out.format("Part II: The number of times Program 1 sends a value is %d.\n", solvePuzzlePartII
-                (storedInput));
+        System.out.format("Part I: The value of the recovered frequency is %d.\n", new ProgramPartI(storedInput).solvePartI());
+        System.out.format("Part II: The number of times Program 1 sends a value is %d.\n", solvePuzzlePartII(storedInput));
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {

@@ -14,7 +14,7 @@ final class Main {
         Output output = solvePuzzle(registers, instructions);
 
         System.out.format("Part I: The largest value is %d.\n", output.getHighestValueAtCompletion());
-        System.out.format("Part II: The highest value ever is is %d.\n", output.getHighestValueEver());
+        System.out.format("Part II: The highest value ever is %d.\n", output.getHighestValueEver());
     }
 
     private static List<String> readInputFile(final String inputFilePath) throws IOException {

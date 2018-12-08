@@ -10,8 +10,7 @@ final class Main {
 
         Output output = solvePuzzle(storedInput);
 
-        System.out.format("Part I: The number of programs in the program 0 group is %d.\n", output.getSizeOfGroupWith0
-                ());
+        System.out.format("Part I: The number of programs in the program 0 group is %d.\n", output.getSizeOfGroupWith0());
         System.out.format("Part II: The total number of groups is %d.\n", output.getNumberOfGroups());
     }
 
